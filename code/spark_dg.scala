@@ -38,8 +38,8 @@ flightData2015.createOrReplaceTempView("flight_data_2015")
 val sqlWay = spark.sql("""
 
 SELECT DEST_COUNTRY_NAME, count(1)
-FROM flight_data_2015
-GROUP BY DEST_COUNTRY_NAME
+  FROM flight_data_2015
+  GROUP BY DEST_COUNTRY_NAME
 """)
 
 val dataFrameWay = flightData2015
@@ -60,10 +60,10 @@ flightData2015.select(max("count")).take(1)
 // find out the top five destination countries in the dataset
 val maxSql = spark.sql("""
 SELECT DEST_COUNTRY_NAME, sum(count) as destination_total
-FROM flight_data_2015
-GROUP BY DEST_COUNTRY_NAME
-ORDER BY sum(count) DESC
-LIMIT 5
+  FROM flight_data_2015
+  GROUP BY DEST_COUNTRY_NAME
+  ORDER BY sum(count) DESC
+  LIMIT 5
 """)
 
 maxSql.show()

@@ -28,11 +28,14 @@ $ spark-shell
 
 Single machines do not have enough power and resources to perform computation on huge amounts of information (or the user probability does not have the time to wait for the computation to finish). A cluster, or group, of computers, pools the resources of many machines together, giving us the ability to use all the cumulative resources as if they were a single computer. Now, a group of machines alone in not powerful, you need a framework to coordinate work across them. Spark does just that, managing and coordination the execution of task on data across a cluster of computers.
 
-The cluster of machines that Spark ✨ will use to execute tasks in managed by a cluster manager like:
+The cluster of machines that Spark 💥 will use to execute tasks in managed by a cluster manager like:
 
+- Local cluster mode.
 - Spark's standalone cluster manager.
 - YARN.
 - Mesos.
+
+![](https://raw.githubusercontent.com/gabrielfernando01/spark_def_guide/main/images/local_vs_standalone.png)
 
 ### Spark Application
 
@@ -49,7 +52,7 @@ The _exexutors_ are responsible for actually carrying out the work that the driv
 - Excuting code assigned to it by the driver
 - Reporting the state of the computation on that executor back to the driver node.
 
-![](https://raw.githubusercontent.com/gabrielfernando01/spark_def_guide/main/images/architecture_spark_application.png)
+![](https://raw.githubusercontent.com/gabrielfernando01/spark_def_guide/main/images/driver_vs_managercluster.png)
 
 In figure above, we can see the driver on the left and four executor on the right. In this diagram, we removed the concept of cluster node. The user can specify how many executors should fall on each node through configuration.
 
