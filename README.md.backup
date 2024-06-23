@@ -18,12 +18,12 @@ UC Berkeley AMPlab.
 
 ### Running Spark
 
-From the official site <a href="https://www.apache.org/dyn/closer.lua/spark/spark-3.5.1/spark-3.5.1-bin-hadoop3.tgz">Download the latest version of Apache Spark with Hadoop</a></br>. Once downloades, then
+From the official site <a href="https://www.apache.org/dyn/closer.lua/spark/spark-3.5.1/spark-3.5.1-bin-hadoop3.tgz">Download the latest version of Apache Spark with Hadoop</a></br>.
 
 ```
 $ cd ~/Download
 $ tar -xf spark-*.tgz
-$ mv spark-* /opt/spark			-- set superuser permission fot this directory
+$ mv spark-* /opt/spark		-- set superuser permission for this directory
 ```
 
 Once Spark is installed, we can launch it from the console using the command:
@@ -161,4 +161,26 @@ There are three kinds of actions:
 You can monitor the progress of a job through the Spark web UI. The Spark UI is available on port 4040 of the driver node. If you are running in local mode, this will be _http://localhost:4040_. The Spark UI displays information on the state of your Spark jobs, its environment, and cluster state. It’s very useful, especially for tuning and debugging. The figure below 👇🏼 show an example UI for Spark job where two stages containig nine task were execute.
 
 ![](https://raw.githubusercontent.com/gabrielfernando01/spark_def_guide/main/images/ui.png)
+
+### An End-to-End Example
+
+We’ll use Spark to analyze some <a href="https://github.com/gabrielfernando01/spark_def_guide/tree/main/data/flight-data/csv">flight-data</a> from the United States Bureau of Transportation statistics.
+
+Each file has a number of rows within it. These files are CSV files, meaning that they’re a semi-structured data format, with each row in the file representing a row in our future DataFrame:
+
+```
+$ head Documents/de/spark_dg/data/flight-data/csv/2015-summary.csv
+```
+
+To get the schema information, Spark reads in a little bit of the data an then attempts to parse the types in those rows according to the types available in Spark.
+
+```
+val flightData2015 = spark
+  .read
+  .option("inferSchema", "true")
+  .option("header", "true")
+  .csv("/data/flight-data/csv/2015-summary.csv")
+```
+
+The figure below 👇🏼 provides an ilustration of the CSV file being read into a DataFrame and then being converted into a local array or list of rows.
 
