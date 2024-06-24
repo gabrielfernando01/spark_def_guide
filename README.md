@@ -11,11 +11,11 @@ Apache Spark is a unifed computing engine and a set of libraries for parellel da
 
 ### History of Spark
 
-Apache Spark began at UC Berkeley in 2009 as the Spark research project, which was first published the following year in a paper entitled “Spark: Cluster Computing with Working Sets” by Matei Zaharia, Mosharaf Chowdhury, Michael Franklin, Scott Shenker, and Ion Stoica of the UC Berkeley AMPlab.
+Apache Spark began at UC Berkeley in 2009 as the Spark research project, which was first published the following year in a paper entitled «Spark: Cluster Computing with Working Sets» by Matei Zaharia, Mosharaf Chowdhury, Michael Franklin, Scott Shenker, and Ion Stoica of the UC Berkeley AMPlab.
 
 ### Running Spark
 
-Before installing, we verify that we have java, scala and python installed on our OS.
+Before starting the installation we must check that we have java, python, scala installed.
 
 ```
 $ java --version
