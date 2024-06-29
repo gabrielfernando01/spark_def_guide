@@ -102,8 +102,8 @@ Here are the key points to understand about Spark Applications at this point:
 
 Although you can drive Spark from a variety of languages, what it makes avaible in those languages is worth mentioning. Spark has two funtadamental sets of APIs:
 
-- The low-level "unstructured" APIs.
-- The higher-level structured APIs.
+- The low-level «unstructured» APIs.
+- The higher-level «structured» APIs.
 
 ### Startig Spark
 
