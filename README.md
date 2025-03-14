@@ -1,21 +1,23 @@
-# Spark The Definitive Guide
-### by Bill Chambers & Matei Zaharia
+![](https://raw.githubusercontent.com/gabrielfernando01/spark_def_guide/main/images/cover_readme.png)
+
+# Spark 💥 The Definitive Guide.
+### by Bill Chambers & Matei Zaharia.
 
 ![](https://raw.githubusercontent.com/gabrielfernando01/spark_def_guide/main/images/cover_def_guide.png)
 
-## Chapter 1. What is Apache Spark?
+## Chapter 1. What is Apache Spark 💥?
 
 Apache Spark is a unifed computing engine and a set of libraries for parellel data processing on computer cluster.
 
 ![](https://raw.githubusercontent.com/gabrielfernando01/spark_def_guide/main/images/sparks_toolkit.png)
 
-### History of Spark
+### History of Spark 💥,
 
 Apache Spark began at UC Berkeley in 2009 as the Spark research project, which was first published the following year in a paper entitled «Spark: Cluster Computing with Working Sets» by Matei Zaharia, Mosharaf Chowdhury, Michael Franklin, Scott Shenker, and Ion Stoica of the UC Berkeley AMPlab.
 
-### Running Spark
+### Running Spark 💥.
 
-Before starting the installation we must check that we have java, python, scala installed.
+Before starting the installation we must check that we have Java ☕, Python 🐍, Scala 🟥 installed.
 
 ```
 $ java --version
