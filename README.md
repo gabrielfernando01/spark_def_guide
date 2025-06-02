@@ -53,8 +53,9 @@ export PYSPARK_DRIVER_PYTHON_OPTS='notebook'
 
 Once Spark is installed, we can launch it from the console using the command:
 
+Bash
 ```
-$ spark-shell
+spark-shell
 ```
 
 ## Chapter 2. Gentle Introduction to Spark
